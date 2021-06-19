@@ -16,10 +16,10 @@ def run():
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			s = socket.socket(socket.AF_INET, socket.SOCK_RAW)
 			addr = (str(ip),int(port))
 			for x in range(times):
-				s.send(data,addr)
+				s.send(data)
 			print(i +" Sent!!!")
 		except:
 			print("[!] Error!!!")
