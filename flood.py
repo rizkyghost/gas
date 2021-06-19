@@ -19,7 +19,7 @@ def run():
 			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			addr = (str(ip),int(port))
 			for x in range(times):
-				s.sendto(data,addr)
+				s.send(data,addr)
 			print(i +" Sent!!!")
 		except:
 			print("[!] Error!!!")
